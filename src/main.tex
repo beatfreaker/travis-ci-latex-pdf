@@ -67,7 +67,27 @@
 
 \usepackage{textcomp}
 
-\usepackage{fontawesome}
+%\usepackage{fontawesome}
+
+\newfontfamily{\FA} [Path = ./,
+    UprightFont = *,
+    BoldFont = *,
+    ItalicFont = *,
+    SmallCapsFont = *
+ ]
+{FontAwesome}
+
+\def\faGlobe{\symbol{"F0AC}}
+\def\faGithub{\symbol{"F09B}}
+\def\faLinkedin{\symbol{"F0E1}}
+\def\faEnvelope{\symbol{"F003}}
+\def\faPhone{\symbol{"F095}}
+
+\def\globe{{\FA \faGlobe}}
+\def\github{{\FA \faGithub}}
+\def\linkedin{{\FA \faLinkedin}}
+\def\envelope{{\FA \faEnvelope}}
+\def\phone{{\FA \faPhone}}
 
 \usepackage{enumitem}
 \setlist[description]{%
@@ -92,15 +112,15 @@
 % \par{\centering\normalsize {\textsc{Undergraduate student at Indian Institute of Technology, Kharagpur}}\par}\normalsize
 % \par{\centering\normalsize {\textsc{Department of Computer Science and Engineering}}\par}\normalsize
 %\par{{\begin{center}Dual Degree, \emph{Computer Science and Engineering}\end{center}}}
-\normalsize  \faGlobe\ {\href{http://beatfreaker.github.io/}{\  beatfreaker.me}}\\
-\normalsize \faGithub\ {\href{https://github.com/beatfreaker}{\  beatfreaker}}\\
-\normalsize  \faLinkedinSquare\ {\href{https://www.linkedin.com/in/radiachintan/}{\  chintan-radia}}\\
+\normalsize  \globe\ {\href{http://beatfreaker.github.io/}{\  beatfreaker.me}}\\
+\normalsize \github\ {\href{https://github.com/beatfreaker}{\  beatfreaker}}\\
+\normalsize  \linkedinSquare\ {\href{https://www.linkedin.com/in/radiachintan/}{\  chintan-radia}}\\
 \columnbreak
 \normalsize\par{\centering{\huge\textsc{\textcolor{primary}{Chintan} R}}\par} % Your name
 \par{\centering\normalsize {\textsc{DSK Sundarban, BH Amanora Mall, Pune, Maharashtra}}\hfill\par}
 \columnbreak
-\raggedright\hfill\normalsize \faEnvelope\ {\href{mailto:radiachints1512@gmail.com}{\  radiachints1512@gmail.com}}\\
-\raggedright\hfill{\faPhone\ \  +91-7405534182}
+\raggedright\hfill\normalsize \envelope\ {\href{mailto:radiachints1512@gmail.com}{\  radiachints1512@gmail.com}}\\
+\raggedright\hfill{\phone\ \  +91-7405534182}
 \end{multicols}
 
 %----------------------------------------------------------------------------------------
