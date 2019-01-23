@@ -1,18 +1,10 @@
 sudo: required
-dist: trusty
-before_install:
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+language: generic
+services: docker
+
 script:
-- mkdir _build
-- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build tex/your_file_1.tex
-- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build tex/your_file_2.tex
-deploy:
-  provider: releases
-  api_key:
-    secure: [YOUR KEY]
-  file:
-  - _build/your_file_1.pdf
-  - _build/your_file_2.pdf
-  skip_cleanup: true
-  on:
-    tags: true
+  # We use the docker image from https://hub.docker.com/r/dxjoke/tectonic-docker/
+  # Compiling only main.tex:
+  - docker run --mount src=$TRAVIS_BUILD_DIR/src,target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic main.tex"
+  # Compiling multiple files as well as using biber:
+#  - docker run --mount src=$TRAVIS_BUILD_DIR/src,target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic --keep-intermediates --reruns 0 biber-mwe.tex; biber biber-mwe; tectonic biber-mwe.tex; tectonic main.tex"
