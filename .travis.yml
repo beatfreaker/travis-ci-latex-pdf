@@ -1,23 +1,13 @@
 sudo: required
 language: generic
 services: docker
-
 script:
-  # We use the docker image from https://hub.docker.com/r/dxjoke/tectonic-docker/
-  # Compiling only main.tex:
-  - docker run --mount src=$TRAVIS_BUILD_DIR/src,target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic resume.tex"
-  # Compiling multiple files as well as using biber:
-#  - docker run --mount src=$TRAVIS_BUILD_DIR/src,target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic --keep-intermediates --reruns 0 biber-mwe.tex; biber biber-mwe; tectonic biber-mwe.tex; tectonic main.tex"
+- docker run --mount src=$TRAVIS_BUILD_DIR/src,target=/usr/src/tex,type=bind dxjoke/tectonic-docker
+  /bin/sh -c "tectonic resume.tex"
 deploy:
   provider: releases
   api_key:
-    secure: SeW8DeW7rM3F99hSMamMZKOD6/s/ANTn6cmrWmESK3GrqtrSctwVfs6jPshJxtooMgzsbNTJ7vTF40akyR+7OOEBZF0Tq5rim0oCzfkEyPsPBAFd0to7Ky/jUvPwZXvD5sf/8Rlbe30Pd1TtZqgL8+DeDjzZfD01W9QbmkVHLoposHWa5krCqHG/gHXRZBfc3Fte3sBP/Byyd/ZuI24lyh09fboU1nh0g5dJguEqxFd0dmj3Q77pL/qsqal+sLULQd5EeCH+pbZywnLLcAPhAMdJ4eTCjEeUOrFXx2/d9Ht1OrmRMAev+EiSp+YM2P9s8EQbubXGUdtNo4GCRc/gQzN4zMUZaqlOXQxyKQoJK82/zpCPt//9zsNpheFNIGSyxo9D13bF9aAZuwBoJrlMg0oLoUUEp1a2VdP0hmT0cXx3/vGDbxiYbXFVi8pYBu3CXqIVZWQS0FQlYf0nDFlA6vGf2HXMEApW56A4P10YrlOwqNrSdiz0DwH5aOF8fjDdsq8WQzK7LiKaSqqx93GfjGRoQ/suIC1gE0KEf7a06ryutnCHuv2Z/TDXLV76+EbENhypTMwk7iFMC9ObM1IaLKPT7WbDcsxgDZiwhvpzAoJjx7o9ZUGbmwW7FNOz7gIE6Y/bh02PTnG5ETn/oQVo6ejLjHK9P2VmFJ6jNTavbNw=
-  file:
-  - ./src/resume.pdf
-  skip_cleanup: true
+    secure: Epga8XRNNhLDKdK/52EWk8JPkV3MdCtu3yFmd1W4CdqhfcDT6GdE5GJsQNR39pYBdOW+L/tD3E+/BLiR1f9B7uvb4NADw7T7PsOsgTCL8RZBsa97Xwx1FotV4r3GXC1RZ7DW2IELapxBy8R6tfohHhnFXTnJXrV/1rvxKVsaxle8rdC8H5oSgd7W02PlrIi+td0yJy/GtJ9aKcBuA+vtSFaPo6a8yAmm9fHKjt0HbMDDqqf5EwPiehjF6Z6rZRQBJSirK0fi4X5gtokBIGJ5YmSRkkOl3GN5O9oPKI6Tn1t5sz5aTFQuHYZuQ6RJI1odiXcw5XLcl73ScTwWSy1VNPNr6KRQwzccesmS9VR7HxgkA1TPYYqlqaaTiUseBrFdUfFQ1hpAAA6NpQ3C4g8F8xkeFSWTr+mhXFyD+seTcndYp+RspXzuxfNWSfd82hgLV2ned82uqd7VmJeifiiJs45QQaPOuED7qYiTMtP9QUtw8PvJpDHIkvkpqI7oSf9TXjGU+sdGEh502HvlzZhA9NwTkOQDIASFYAtlr/m6q9cw9SyqsKbNd5KckJ89x7HK/ZHl2+1ItvhXX5dRvHVc63SgGZ56ssZBwdLq8W2nVkAbWNPpsx8+nR0iDhP5IIsQ72GDKSt0W1EZD/7hX0xqzNK3+5zwqJdDvkI0acZzmkI=
+  file: "./src/resume.pdf"
   on:
-    tags: false
-    branch: master
-env:
-  global:
-    secure: SeW8DeW7rM3F99hSMamMZKOD6/s/ANTn6cmrWmESK3GrqtrSctwVfs6jPshJxtooMgzsbNTJ7vTF40akyR+7OOEBZF0Tq5rim0oCzfkEyPsPBAFd0to7Ky/jUvPwZXvD5sf/8Rlbe30Pd1TtZqgL8+DeDjzZfD01W9QbmkVHLoposHWa5krCqHG/gHXRZBfc3Fte3sBP/Byyd/ZuI24lyh09fboU1nh0g5dJguEqxFd0dmj3Q77pL/qsqal+sLULQd5EeCH+pbZywnLLcAPhAMdJ4eTCjEeUOrFXx2/d9Ht1OrmRMAev+EiSp+YM2P9s8EQbubXGUdtNo4GCRc/gQzN4zMUZaqlOXQxyKQoJK82/zpCPt//9zsNpheFNIGSyxo9D13bF9aAZuwBoJrlMg0oLoUUEp1a2VdP0hmT0cXx3/vGDbxiYbXFVi8pYBu3CXqIVZWQS0FQlYf0nDFlA6vGf2HXMEApW56A4P10YrlOwqNrSdiz0DwH5aOF8fjDdsq8WQzK7LiKaSqqx93GfjGRoQ/suIC1gE0KEf7a06ryutnCHuv2Z/TDXLV76+EbENhypTMwk7iFMC9ObM1IaLKPT7WbDcsxgDZiwhvpzAoJjx7o9ZUGbmwW7FNOz7gIE6Y/bh02PTnG5ETn/oQVo6ejLjHK9P2VmFJ6jNTavbNw=
+    repo: beatfreaker/travis-ci-latex-pdf
