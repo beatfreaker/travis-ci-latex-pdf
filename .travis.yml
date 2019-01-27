@@ -11,10 +11,10 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: 13be2d6a5cba121abc26779fe62714f732c61820
+    secure: SNnxu6pdpvVGR2TX7YjV4PzYFAjqggz28tyjFgDh8BYSBUUz9r0nbedJkCfJ/MaaOERl0wYraaHO6gy3litSLFht+elKc2dXZSvphHGWqyNj9xnke61drkUZyMQReDI/MDr+FwJzbTi60pQom8cYObGrJX7enYkFeCFEZAEt2yuDBrPv5YKSgyd4SseOJnvFv9VaMB58Olb0I6mpq2jdzP2geyHiAYPSKVEb64/deLa3MgttkHiX1Qx48rg0szFXpz6eQ1GD4t0uCqyHd53A1ZQ768bK+sqQMOQMw5mX1QxQznRXg2NJlW7SqWRQGtTuYYRvzu5+zOeQFVtsNNqHhvLefAazAZEwHLXZehB7bTN2fUcQbLFevwnthqUZa8oL64kYa18SklgytU9NeGlh7CsgmGHt0f/N7WjbNuAWD6PWS2nyYZet4lSw7plvCug2OQKUeiFoQeM/sMeOFCeFor8aItTIkG0kh1H0GzegEQ3UbmC3fGUom9bOXgOFS7TIJf7R/8RUqPjWtajCQIXyFiuqe2wLFynHxfHSbWVdzsqDdLiHohWJPAyRBuYskrOoEGNjCgbAiVr8Db/2EqNBYS7NaUVaayE2U2PuEk46qldZEGHfQeNRHSo3uoXviBi6UasXEALmSCm3bsKP03dnXCYTGpcesxBCuOelKYs/aD8=
   file:
   - ./src/resume.pdf
   skip_cleanup: true
   on:
-    tags: true
+    tags: false
     branch: master
