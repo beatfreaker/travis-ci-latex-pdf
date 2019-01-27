@@ -8,6 +8,8 @@ deploy:
   provider: releases
   api_key:
     secure: Epga8XRNNhLDKdK/52EWk8JPkV3MdCtu3yFmd1W4CdqhfcDT6GdE5GJsQNR39pYBdOW+L/tD3E+/BLiR1f9B7uvb4NADw7T7PsOsgTCL8RZBsa97Xwx1FotV4r3GXC1RZ7DW2IELapxBy8R6tfohHhnFXTnJXrV/1rvxKVsaxle8rdC8H5oSgd7W02PlrIi+td0yJy/GtJ9aKcBuA+vtSFaPo6a8yAmm9fHKjt0HbMDDqqf5EwPiehjF6Z6rZRQBJSirK0fi4X5gtokBIGJ5YmSRkkOl3GN5O9oPKI6Tn1t5sz5aTFQuHYZuQ6RJI1odiXcw5XLcl73ScTwWSy1VNPNr6KRQwzccesmS9VR7HxgkA1TPYYqlqaaTiUseBrFdUfFQ1hpAAA6NpQ3C4g8F8xkeFSWTr+mhXFyD+seTcndYp+RspXzuxfNWSfd82hgLV2ned82uqd7VmJeifiiJs45QQaPOuED7qYiTMtP9QUtw8PvJpDHIkvkpqI7oSf9TXjGU+sdGEh502HvlzZhA9NwTkOQDIASFYAtlr/m6q9cw9SyqsKbNd5KckJ89x7HK/ZHl2+1ItvhXX5dRvHVc63SgGZ56ssZBwdLq8W2nVkAbWNPpsx8+nR0iDhP5IIsQ72GDKSt0W1EZD/7hX0xqzNK3+5zwqJdDvkI0acZzmkI=
+  skip_cleanup: true
   file: "./resume.pdf"
   on:
+    tags: true
     repo: beatfreaker/travis-ci-latex-pdf
