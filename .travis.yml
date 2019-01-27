@@ -11,7 +11,7 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: 13be2d6a5cba121abc26779fe62714f732c61820
+    secure: OXgZgkKMLOkPYjGTkMBciXovhRw0GsJatT+WFDvO+0/9vZM4B8nm/KB+xq3YWphZOOqdOSxo6w2jJdgku/4Y9WU+FGYArdCHGBYiRKJFBNuZaSERwjFflOmap7gfsUsG7rhhdFB+CwdsW5N+YIsqsAQUoOVZreVfDjcSjIygYwV88dFHgTiGLumu9oqpCyESBaFKHy5/VvzsRrg2i1Iy9gZlUJxATaSs7JYtF35gBK/S6+I/a9I91z9AjalWBfp8JY87p/y7avsyA4pOrjNhK5BoBG9PoXWLRPE9E7otb6ZBBfACtXJFd4Mr0s7ZvY7Ec/dTFH4Fl5jZULn7B0CJzrX+9uYMmxPCQd91zZNY1pnHvXyBLTZ8p4GwXpHEYpgQOMK4Qa76T7WpXA7dF07pJjZbGCzmuYYbyJfWnyU9f4SfR9j/Ol0p9blHK5brhWpzfU0ttafXBGvxsOhKkOHZB+9qm3FKH31xuzqKM5WFMp21pfTZQkTOfXCLBRDTFAQ4QOR/oShRyU2j0j2sRCV86cKuZTdU9TRA1qxYsxxyTkg6E69ojeoF0twb260z3oZLkiitThFem0wDjqr8CGbAl/WO1ru/3ykFvXKq6+LGA5df/hoOJUVO0eEpeVGwJxclw0t2E8TDHdx8xy9AtlD1M3eErjY98e7FXQIJFylepcI=
   file:
   - ./src/resume.pdf
   skip_cleanup: true
