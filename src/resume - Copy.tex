@@ -1,0 +1,298 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plasmati Graduate CV
+% LaTeX Template
+% Version 1.0 (24/3/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati (alessandro.plasmati@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template needs to be compiled with XeLaTeX.
+% The main document font is called Fontin and can be downloaded for free
+% from here: http://www.exljbris.com/fontin.html
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{extarticle} % Default font size and paper size
+
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+% \setmainfont[SmallCapsFont = Fontin Regular]{Fontin} % Main document font
+\setmainfont[Path = ./Ubuntu/,  %% Optional; but UPDATE this if 
+%% your font files are in a folder
+Extension = .ttf,
+UprightFont = *-Regular,
+BoldFont = *-Bold,
+ItalicFont = *-Italic,
+SmallCapsFont = *-Regular]
+{Ubuntu}
+\usepackage{color}
+% \definecolor{primary}{RGB}{130, 2, 99}
+\definecolor{primary}{RGB}{220, 53, 34}
+\definecolor{secondary}{RGB}{251, 139, 36}
+\usepackage{xltxtra,url,parskip} % Formatting packages
+
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+%\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be 
+%\usepackage{fullpage}
+\usepackage{geometry}
+\geometry{a4paper,margin=0.60cm}
+\geometry{a4paper,top=0.90cm}
+%To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+%\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\definecolor{linkcolour}{rgb}{0.3,0.3,0.3} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{0pt}{0pt} % Spacing around sections
+
+\usepackage{multicol}
+\setlength{\columnsep}{0cm}
+
+\usepackage{tabularx}
+
+\usepackage{textcomp}
+
+%\usepackage{fontawesome}
+
+\newfontfamily{\FA} [Path = ./,
+UprightFont = *,
+BoldFont = *,
+ItalicFont = *,
+SmallCapsFont = *
+]
+{FontAwesome}
+
+\def\faGlobe{\symbol{"F0AC}}
+\def\faGithub{\symbol{"F09B}}
+\def\faLinkedin{\symbol{"F0E1}}
+\def\faEnvelope{\symbol{"F003}}
+\def\faPhone{\symbol{"F095}}
+\def\faExternalLink{\symbol{"F08E}}
+
+\def\globe{{\FA \faGlobe}}
+\def\github{{\FA \faGithub}}
+\def\linkedin{{\FA \faLinkedin}}
+\def\envelope{{\FA \faEnvelope}}
+\def\phone{{\FA \faPhone}}
+\def\externalLink{{\FA \faExternalLink}}
+
+
+\usepackage{enumitem}
+\setlist[description]{%
+	topsep=10pt,               % space before start / after end of list
+	itemsep=1pt,               % space between items
+	%  font={\bfseries\sffamily\color{red}}, % if colour is needed
+}
+
+\def\arraystretch{1}
+\renewcommand{\baselinestretch}{1.1}
+
+\begin{document}
+	
+	\pagestyle{empty} % Removes page numbering
+	
+	
+	%----------------------------------------------------------------------------------------
+	%	NAME AND CONTACT INFORMATION
+	%----------------------------------------------------------------------------------------
+	\begin{multicols}{3}
+		
+
+		\normalsize  \linkedin\ {\href{https://www.linkedin.com/in/jay-radia-940998146/}{\  jay-radia}}\\
+		\columnbreak
+		\normalsize\par{\centering{\huge\textsc{\textcolor{primary}{Jay} Radia}}\par} % Your name
+		\par{\centering\normalsize {\textsc{14-Swi Park, Nilkanth mahadev road, Madhuvrund Society, Ghatlodiya, 
+					Ahmedabad
+}}\hfill\par}
+		\columnbreak
+		\raggedright\hfill\normalsize \envelope\ {\href{mailto:jayradia09@gmail.com}{\  jayradia09@gmail.com}}\\
+		\raggedright\hfill{\phone\ \  +91-8460483805}
+		
+	\end{multicols}
+	
+	
+	%----------------------------------------------------------------------------------------
+	%	SUMMARY
+	%----------------------------------------------------------------------------------------
+	
+	\section{\textcolor{primary}{Summary}}
+	\vspace{-0.5cm}
+	\begin{tabular}{p{19.7cm}}
+		\begin{description}
+			
+			
+			\item Enthusiastic Software Developer eager to contribute to team success through hard work, attention to detail and
+			\item excellent organizational skills. Clear understanding of ASP.NET(C\#) and .NET(MVC). Motivated to learn, grow and 
+			\item excel in software industry.
+			\item Looking for a firm with a professional work driven environment
+			where I can utilize and apply my knowledge, skills
+			\item which would enable me as a Junior developer to grow while fulfilling organizational goals.
+		\end{description}
+	\end{tabular}
+	
+	
+	%----------------------------------------------------------------------------------------
+	%	SKILLS 
+	%----------------------------------------------------------------------------------------
+	
+	\section{\textcolor{primary}{Technical Skills}}
+	\vspace{0.1cm}
+	\begin{tabular}{r|p{15cm}}
+		
+		\textsc{Programming} & \textit{Proficient:} ASP.NET(C\#), .NET(MVC), ASP.NET Web API\\
+		& \textit{Competent:} Javascript, C, C++ \\
+		\textsc{Libraries / Frameworks} & Bootstrape, jQuery, Entity Framework \\
+		\textsc{Databases} & SQL Server management studio\\
+		\textsc{Systems / Platforms / Tools} & Git, Windows, Visual Studio, SQL Server\\
+		%\textsc{Markup / Templating} & HTML, CSS, Sass
+		
+	\end{tabular}
+	
+	
+	\vspace{0.2cm}
+	
+	%----------------------------------------------------------------------------------------
+	%	WORK EXPERIENCE
+	%----------------------------------------------------------------------------------------
+	
+	\section{\textcolor{primary}{Work Experience}}
+	\vspace{0.2cm}
+	\begin{tabularx}{\linewidth}{ l | X }
+		
+		\textsc{Jan 21} & \textbf{Software Developer}\hfill\textbf{BAS Services \& Graphics, LLC.}\\
+		\textsc{Present}
+		& {- Working on ASP.Net to expose sensor device data via REST API. } \\
+		& {- Have worked on a module to create UI using ASP.Net MVC } \\
+		
+		\multicolumn{2}{c}{} \\
+
+		\textsc{Aug 20} & \textbf{Freelance Software Developer}\hfill\textbf{Freelancer}\\
+		\textsc{Jan 21}
+		& {- Worked on ASP.Net MVC project to build shopping cart. } \\
+		& {- My main role is to create Web/Rest API which can be consumed by front end application.}\\
+		& {- Used Entity framework to interact with database.}\\
+
+		\multicolumn{2}{c}{} \\
+		
+		\textsc{May 19} & \textbf{Software Developer}\hfill\textbf{ActionEdge Knowledge Services LLP}\\
+		\textsc{June 20}
+		& {- Working on .Net(C\#) project, I am working on module where I create webpages
+		of questionnaire using Visual Studio, Javascript/jQuery } \\
+		& {- For storing data we are using SQL Server.}\\
+		
+		\multicolumn{2}{c}{} \\
+		
+		\textsc{Aug 18} & \textbf{Intern}\hfill\textbf{Ahead Innovation}\\
+		\textsc{May 19}
+		& {- Worked on liveoffice software, which is a webapp developed using .Net(C\#).}\\
+		& {- I worked on leave application form and attendance module, where I created these forms using Visual Studio, Javascript/jQuery and to store the data we used  SQL server.} \\
+		
+		\multicolumn{2}{c}{} \\
+		
+		
+	\end{tabularx}
+	
+	
+	%\vspace{0.5cm}
+	
+	%----------------------------------------------------------------------------------------
+	%	EDUCATION
+	%----------------------------------------------------------------------------------------
+	
+	
+	\section{\textcolor{primary}{Education}}
+	\vspace{0.2cm}
+	\begin{tabular}{r|p{17.5cm}}
+		
+		2015-2018 & B.Tech in \textbf{Computer Engineering}\hfill\textsc{CGPA}: 7.32/10.0\\
+		\textsc{}&\textbf{Alpha College of Engineering and Technology}, Ahmedabad - Gujarat\\
+		
+		\multicolumn{2}{c}{} \\
+		
+		2012-2015 & Diploma in \textbf{Computer Engineering}\hfill\textsc{CGPA}: 8.11/10.0\\
+		\textsc{}&\textbf{Aarsh Mahavidhyalaya}, Rajkot - Gujarat\\		
+
+
+		\multicolumn{2}{c}{} \\
+
+		2010 & SSC \textbf{}\hfill\textsc{Percentage}: 65.5\\
+		\textsc{}&\textbf{Sunshine school}, Rajkot - Gujarat\\			
+	\end{tabular}
+	
+	\vspace{0.2cm}
+	
+	%----------------------------------------------------------------------------------------
+	%	PROJECTS
+	%----------------------------------------------------------------------------------------
+	
+	\section{\textcolor{primary}{Academic Projects}}
+	\vspace{-0.2cm}
+	\begin{tabular}{p{19.7cm}}
+		\begin{description}[style=nextline, font=$\bullet$\hspace{2mm}\normalsize]
+			
+			\item[Client management system for CA ] This is an android application developed for CA to manage their clients details and ITR document details,
+			\newline the app contains features like
+			basic registration and update profile pages, tax calculation, document
+			upload,
+			\newline and ITR status
+			\newline Tools/Technology - Android Studio, 
+			Google Firebase for storing the data.
+			
+			\item[Student portal] The web app helps to manage student details which includes basic data management pages, results management,
+			\newline time table management,
+			\newline Tools/Technology - .NET framework, Visual Studio 2010,
+			SQL Server management studio
+			\newline Microsoft Visio attendance tracking, managing reference materials
+			
+			\item[School management system] This is same as Student management portal but with less feature as this is
+			to target schools while Student portal was
+			\newline basically for College students
+			\newline Tools/Technology - .NET framework, Visual Studio 2010,
+			SQL Server management studio
+			\newline Microsoft Visio
+
+		\end{description}
+	\end{tabular}
+	
+	
+	%----------------------------------------------------------------------------------------
+	%	PERSONAL Details
+	%----------------------------------------------------------------------------------------
+	
+	\section{\textcolor{primary}{Personal Details}}
+	\vspace{-0.2cm}
+	\begin{tabular}{p{19.7cm}}
+		\begin{description}[style=nextline, font=$\bullet$\hspace{2mm}\normalsize]
+			
+			\item Full name \hspace{1.5cm}        : Jay Radia
+			\item Date of birth \hspace{1cm}    : 9th Feb, 1994
+			\item Sex \hspace{2.47cm}              : Male
+			\item Marital Status \hspace{0.8cm}   : Unmarried
+			\item Nationality \hspace{1.3cm}      : Indian
+			\item Languages \hspace{1.35cm}        : English, Hindi, Gujarati
+			\item Strengths \hspace{1.45cm}        : Positive attitude, Team work, Loyal
+			\item Hobbies \hspace{1.7cm}        : Travelling, Listening to Music
+		\end{description}
+	\end{tabular}
+	
+	\begin{description}
+		\item I here by declare that the above written particulars are true to the best of my knowledge and
+		belief.
+	\end{description}
+	
+\end{document}
